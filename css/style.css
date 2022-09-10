@@ -672,12 +672,15 @@ transition: fill 250ms var(--timing-function);
 
 .form-modal .label {
     display: block;
-
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: var(--paragraph-text-color);
+}
+
+.form-modal .thumb-wrap {
+    position: relative;
 }
 
 .form-modal .comment {
@@ -704,8 +707,30 @@ transition: fill 250ms var(--timing-function);
     height: 40px;
     margin-top: 4px;
     margin-bottom: 10px;
+    padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+}
+
+.form-modal .icon {
+    position: absolute;
+    display: inline-block;
+    top: 15px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+ }
+
+.input:focus-visible {
+    border: 1px solid var(--accent-color);
+ }
+
+ .form-modal:focus-visible {
+    border: 1px solid transparent;
+ }
+
+.input:focus + .icon {
+    fill: var(--accent-color);
 }
 
 .form-modal .text-agree {
@@ -719,6 +744,17 @@ transition: fill 250ms var(--timing-function);
     margin-bottom: 30px;
 }
 
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .form-modal .link {
     font-style: normal;
     font-weight: 400;
@@ -726,6 +762,14 @@ transition: fill 250ms var(--timing-function);
     line-height: 1.71;
     text-decoration-line: underline;
     color: var(--accent-color);
+}
+
+.checkbox:checked + .icon-check {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    background-size: contain;
+    background-color: var(--accent-color);
 }
 
 .button-send {
