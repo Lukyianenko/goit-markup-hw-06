@@ -762,14 +762,35 @@ transition: fill 250ms var(--timing-function);
     line-height: 1.71;
     text-decoration-line: underline;
     color: var(--accent-color);
+    margin-left: 5px;
 }
 
-.checkbox:checked + .icon-check {
+.checkbox-label {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+.icon-check {
+    display: flex;
     display: inline-block;
     width: 16px;
     height: 15px;
+    margin-right: 8px;
+   
+
+    border: 1px solid #212121;
+    border-radius: 2px;
+}
+
+.checkbox:checked + .icon-check {
     background-size: contain;
     background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-image: url(../images/check.svg);
+    background-repeat: no-repeat;
 }
 
 .button-send {
@@ -785,6 +806,7 @@ transition: fill 250ms var(--timing-function);
     background-color: var(--accent-color);
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
     
     color: #FFFFFF;
     font-family: inherit;
