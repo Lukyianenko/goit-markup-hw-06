@@ -541,10 +541,6 @@ img {
     height: 86px;
 }
 
-.sign .title {
-   margin-right: 50px;
-}
-
 
 .sign input {
     padding: 15px 16px;
@@ -664,11 +660,18 @@ transition: fill 250ms var(--timing-function);
     font-size: 20px;
     line-height: 23px;
     text-align: center;
-}
+    margin: 0;
+    margin-bottom: 12px;
+    }
 
 .form-modal {
     display: flex;
     flex-wrap: wrap;
+}
+
+.form-modal .text {
+    display: inline-block;
+    margin-bottom: 4px;
 }
 
 .form-modal .label {
@@ -678,6 +681,7 @@ transition: fill 250ms var(--timing-function);
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: var(--paragraph-text-color);
+    margin-bottom: 10px;
 }
 
 .form-modal .thumb-wrap {
@@ -692,10 +696,12 @@ transition: fill 250ms var(--timing-function);
     padding: 12px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    margin-top: 4px;
-    margin-bottom: 20px;
 
     transition: border-color 250ms var(--timing-function);
+}
+
+.label-comment {
+    margin-bottom: 20px;
 }
 
 .form-modal .comment::placeholder {
@@ -709,8 +715,6 @@ transition: fill 250ms var(--timing-function);
 .form-modal .input {
     width: 448px;
     height: 40px;
-    margin-top: 4px;
-    margin-bottom: 10px;
     padding-left: 42px;
     outline: transparent;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -722,10 +726,11 @@ transition: fill 250ms var(--timing-function);
 .form-modal .icon {
     position: absolute;
     display: inline-block;
-    top: 15px;
-    left: 12px;
+    top: 20px;
+    left: 13.5px;
     width: 18px;
     height: 18px;
+    transform: translate(0, -50%);
 
     transition: fill 250ms var(--timing-function);
  }
